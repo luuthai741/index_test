@@ -1,0 +1,13 @@
+server:
+  port: 8080
+# Spring Configuration
+spring:
+  mvc:
+    pathmatch:
+      matching-strategy: ANT_PATH_MATCHER
+  main:
+  datasource:
+    url: jdbc:mariadb://${DB_HOST:localhost}:3306/${DB_NAME:test_index}??useSSL=false&zeroDateTimeBehavior=convertToNull&characterEncoding=utf8&useUnicode=yes&passwordCharacterEncoding=ISO-8859-1
+    username: ${DB_USERNAME:root}
+    password: ${DB_PASSOWRD:123}
+    driverClassName: org.mariadb.jdbc.Driver
